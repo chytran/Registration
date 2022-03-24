@@ -14,7 +14,7 @@ namespace Registration
 {
     public partial class Form1 : Form
     {
-        private const string ConnectionString = (@"Data Source=DESKTOP-E93ERMF\SQLEXPRESS;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+        
 
         public Form1()
         {
@@ -23,8 +23,8 @@ namespace Registration
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(ConnectionString);
-            SqlCommand cmd = new SqlCommand(@"INSERT INTO [dbo].[register]
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-E93ERMF\\SQLEXPRESS;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            SqlCommand cmd = new SqlCommand(@"INSERT INTO [userregcs].[dbo].[register]
            ([firstname]
            ,[lastname]
            ,[address]
